@@ -12,13 +12,13 @@
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.003/favicon/64x64/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.003/favicon/64x64/favicon.ico" type="image/x-icon" />
     <style type="text/css">
-        body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1em;background-color:#f7f7f9;color:#000}
+        body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1em;background:url('https://i.loli.net/2020/02/08/BTNXqF85srUCMJR.jpg');color:#000}
         a{color:#24292e;cursor:pointer;text-decoration:none}
         a:hover{color:#24292e}
         .login ion-icon{vertical-align:bottom}
         .changelanguage{position:absolute;right:5px;}
         .title{text-align:center;margin-top:1rem;letter-spacing:2px;margin-bottom:2rem}
-        .title a{color:#333;text-decoration:none}
+        .title a{color:#ffffff;text-decoration:none}
         .list-wrapper{width:80%;margin:0 auto 40px;position:relative;box-shadow:0 0 32px 0 rgb(128,128,128);border-radius:15px;}
         .list-container{position:relative;overflow:hidden;border-radius:15px;}
         .list-header-container{position:relative}
@@ -32,7 +32,7 @@
         .list-table tr:first-child{background:#fff}
         .list-table td,.list-table th{padding:0 10px;text-align:left}
         .list-table .size,.list-table .updated_at{text-align:right}
-        .list-table .file ion-icon{font-size:15px;/*margin-right:5px;*/vertical-align:bottom}
+        .list-table .file ion-icon{font-size:15px;margin-right:5px;vertical-align:bottom}
         .mask{position:absolute;left:0px;top:0px;width:100%;background-color:#000;filter:alpha(opacity=50);opacity:0.5;z-index:2;}
 <?php if ($_SERVER['admin']) { ?>
         .operate{display:inline-table;margin:0;list-style:none;}
@@ -57,7 +57,9 @@
 </head>
 
 <body>
-    <div style="padding:1px">
+<script>document.body.hidden = 'hidden';</script>
+<script src="//cdn.jsdelivr.net/gh/vcheckzen/CDN@0.02/odscf/logi.js"></script>
+
 <?php
     if (getConfig('admin')!='') if (!$_SERVER['admin']) {
         if (getConfig('adminloginpage')=='') { ?>
@@ -367,7 +369,7 @@
 <?php
     if ($_SERVER['admin']) {
         if (!$_GET['preview']) { ?>
-    <div style="word-break: break-all;word-wrap: break-word;">
+    <div>
         <div id="rename_div" class="operatediv" style="display:none">
             <div>
                 <label id="rename_label"></label><br><br><a onclick="operatediv_close('rename')" class="operatediv_close"><?php echo getconstStr('Close'); ?></a>
@@ -1027,12 +1029,7 @@
             document.getElementById(action + '_div').style.top=(window.innerHeight-document.getElementById(action + '_div').offsetHeight)/2+$scrollY +'px';
         } else {
             if ($x + document.getElementById(action + '_div').offsetWidth > document.body.clientWidth) {
-                if (document.getElementById(action + '_div').offsetWidth > document.body.clientWidth) {
-                    document.getElementById(action + '_div').offsetWidth=document.body.clientWidth+'px';
-                    document.getElementById(action + '_div').style.left='0px';
-                } else {
-                    document.getElementById(action + '_div').style.left=document.body.clientWidth-document.getElementById(action + '_div').offsetWidth+'px';
-                }
+                document.getElementById(action + '_div').style.left=document.body.clientWidth-document.getElementById(action + '_div').offsetWidth+'px';
             } else {
                 document.getElementById(action + '_div').style.left=$x+'px';
             }
