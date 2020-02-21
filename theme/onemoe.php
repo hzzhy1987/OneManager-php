@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="<?php echo $_SERVER['base_path'];?>favicon.ico" type="image/x-icon" />-->
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.003/favicon/64x64/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.003/favicon/64x64/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.02.3/onedrive-index-theme/a6pq2y.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.02.3/onedrive-index-theme-disk/a6pq2y.css" type="text/css">
 </head>
 
 <body>
