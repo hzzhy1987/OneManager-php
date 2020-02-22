@@ -24,13 +24,13 @@ body {
 a {
 	color:#FFFFFF;
 	cursor:pointer;
-	text-decoration:none
+	text-decoration:none;
 }
 a:hover {
-	color:#24292e
+	color:#24292e;
 }
 .login ion-icon {
-	vertical-align:bottom
+	vertical-align:bottom;
 }
 .changelanguage {
 	position:absolute;
@@ -44,7 +44,7 @@ a:hover {
 }
 .title a {
 	color:#1E90FF;
-	text-decoration:none
+	text-decoration:none;
 }
 .list-wrapper {
 	width:80%;
@@ -69,7 +69,7 @@ a:hover {
 	margin:20px 10px;
 	padding:10px 10px;
 	vertical-align:middle;
-	text-decoration:none
+	text-decoration:none;
 }
 .list-container,.list-header-container,.list-wrapper,a.back-link:hover,body {
 	color:#FFFFFF
@@ -81,7 +81,7 @@ a:hover {
 	text-align:left;
 	font-weight:400;
 	color:#FFFFFF;
-	background-color:rgba(85,85,85,0.5);
+	background-color:rgba(85,85,85,0.3);
 	/**文件列表导航条背景颜色 */
 }
 .list-body-container {
@@ -90,7 +90,7 @@ a:hover {
 	overflow-x:hidden;
 	overflow-y:auto;
 	box-sizing:border-box;
-	background:rgba(85,85,85,0.5);
+	background:rgba(85,85,85,0.3);
 	/**文件列表背景颜色 */
 }
 .more-disk {
@@ -100,7 +100,7 @@ a:hover {
 	text-align:left;
 	font-weight:400;
 	color:#000;
-	background-color:#f7f7f9;
+	background-color:rgba(85,85,85,0.3);
 	word-break: break-all;
 	word-wrap: break-word;
 }
@@ -116,22 +116,22 @@ a:hover {
 	height:40px
 }
 .list-table tr[data-to]:hover {
-	background:rgba(85,85,85,0.5)
+	background:rgba(85,85,85,0.3);
 }
 .list-table tr:first-child {
-	background:rgba(85,85,85,0)
+	background:rgba(85,85,85,0);
 }
 .list-table td,.list-table th {
 	padding:0 10px;
-	text-align:left
+	text-align:left;
 }
 .list-table .size,.list-table .updated_at {
-	text-align:right
+	text-align:right;
 }
 .list-table .file ion-icon {
 	font-size:15px;
 	/*margin-right:5px;*/
-	vertical-align:bottom
+	vertical-align:bottom;
 }
 .mask {
 	position:absolute;
@@ -151,7 +151,7 @@ a:hover {
 		list-style:none;
 	}
 	.operate ion-icon {
-		vertical-align:bottom
+		vertical-align:bottom;
 	}
 	.operate ul {
 		position:absolute;
@@ -174,7 +174,7 @@ a:hover {
 		display:inline-table;
 	}
 	.operate ul li ion-icon {
-		vertical-align:bottom
+		vertical-align:bottom;
 	}
 	<?php
 }
@@ -195,12 +195,12 @@ a:hover {
 }
 .readme {
 	padding:8px;
-	background-color:rgba(85,85,85,0.5);
+	background-color:rgba(85,85,85,0.3);
 	/**设置readme和head背景色 */
 }
 .markdown-body {
 	padding:20px;
-	text-align:left
+	text-align:left;
 }
 @media only screen and (max-width:480px) {
 	.title {
@@ -837,7 +837,7 @@ if ($files) {
 	}
 }
 ?> 
-    <center><div style="color:#0cd1e8;"><?php  echo date("Y-m-d H:i:s")." ".getconstStr('Week')[date("w")]." ".$_SERVER['REMOTE_ADDR'];
+    <center><div style="color:#FFFFFF;"><?php  echo date("Y-m-d H:i:s")." ".getconstStr('Week')[date("w")]." ".$_SERVER['REMOTE_ADDR'];
 ?></div></center>
 </body>
 <?php if ($files) {
@@ -1283,7 +1283,7 @@ if ($files) {
 						} else {
 							StartStr='<?php echo getconstStr('LastUpload'); ?>'+size_format(newstartsize)+ '<br><?php echo getconstStr('ThisTime').getconstStr('UploadStartAt'); ?>:' +StartTime.toLocaleString()+'<br>' ;
 						}
-						var chunksize=5*1024*1024;
+						var chunksize=15*1024*1024;
 						// chunk size, max 60M. 每小块上传大小，最大60M，微软建议10M
 						if (totalsize>200*1024*1024) chunksize=10*1024*1024;
 						function readblob(start) {
