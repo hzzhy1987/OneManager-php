@@ -10,43 +10,175 @@
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.003/favicon/64x64/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.003/favicon/64x64/favicon.ico" type="image/x-icon" />
     <style type="text/css">
-        body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1em;background-color:#f7f7f9;color:#000}
-        a{color:#24292e;cursor:pointer;text-decoration:none}
-        a:hover{color:#24292e}
+        body{
+            font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;
+line-height:1em;background-image:url("https://api.ixiaowai.cn/api/api.php");
+color:#33FF7F;}
+        a{color:#33FF7F;cursor:pointer;text-decoration:none;
+            }
+        a:hover{
+            color:#33FF7F;
+            }
+        textarea{
+            color:#33FF7F;
+            background:rgba(85,85,85,0.8)
+        }
         .login ion-icon{vertical-align:bottom}
-        .changelanguage{position:absolute;right:5px;}
-        .title{text-align:center;margin-top:1rem;letter-spacing:2px;margin-bottom:2rem}
-        .title a{color:#333;text-decoration:none}
-        .list-wrapper{width:80%;margin:0 auto 30px;position:relative;box-shadow:0 0 32px 0 rgb(128,128,128);border-radius:15px;}
-        .list-container{position:relative;overflow:hidden;border-radius:15px;}
-        .list-header-container{position:relative}
-        .list-header-container a.back-link{color:#000;display:inline-block;position:absolute;font-size:16px;margin:20px 10px;padding:10px 10px;vertical-align:middle;text-decoration:none}
-        .list-container,.list-header-container,.list-wrapper,a.back-link:hover,body{color:#24292e}
-        .list-header-container .table-header{margin:0;border:0 none;padding:30px 60px;text-align:left;font-weight:400;color:#000;background-color:#f7f7f9;word-break: break-all;word-wrap: break-word;}
-        .list-body-container{position:relative;left:0;overflow-x:hidden;overflow-y:auto;box-sizing:border-box;background:#fff}
-        .more-disk{margin:0;border:0 none;padding:30px 30px;text-align:left;font-weight:400;color:#000;background-color:#f7f7f9;word-break: break-all;word-wrap: break-word;}
-        .more-disk a{padding:5px}
-        .list-table{width:100%;padding:0 20px 20px 20px;border-spacing:0}
-        .list-table tr{height:40px}
-        .list-table tr[data-to]:hover{background:#f1f1f1}
-        .list-table tr:first-child{background:#fff}
-        .list-table td,.list-table th{padding:0 10px;text-align:left}
-        .list-table .size,.list-table .updated_at{text-align:right}
-        .list-table .file ion-icon{font-size:15px;/*margin-right:5px;*/vertical-align:bottom}
-        .mask{position:absolute;left:0px;top:0px;width:100%;background-color:#000;filter:alpha(opacity=50);opacity:0.5;z-index:2;}
+        .changelanguage{
+            position:absolute;
+            right:5px;
+            filter:alpha(opacity=0);opacity:0;
+            }
+        .title{
+            text-align:center;
+            margin-top:1rem;
+            letter-spacing:2px;
+            margin-bottom:2rem;
+            }
+        .title a{
+            color:#33FF7F;
+            text-decoration:none;
+            }
+        .list-wrapper{
+            width:80%;
+            margin:10px auto 20px;
+            position:relative;
+            box-shadow:0 0 32px 0 rgb(128,128,128);
+            border-radius:5px;}
+        .list-container{
+            position:relative;
+            overflow:hidden;
+            border-radius:5px;
+            }
+        .list-header-container{
+            position:relative
+            }
+        .list-header-container a.back-link{
+            color:#33FF7F;
+            display:inline-block;
+            position:absolute;
+            font-size:18px;
+            margin:20px 10px;
+            padding:10px 10px;
+            vertical-align:middle;
+            text-decoration:none}
+        .list-container,.list-header-container,.list-wrapper,a.back-link:hover,body{
+            color:#33FF7F
+            }
+        .list-header-container .table-header{
+            margin:0;
+            border:0 none;
+            padding:30px 60px;
+            text-align:left;
+            font-weight:400;
+            color:#33FF7F;
+            background-color:rgba(51,51,51,0.8);
+            }
+        .list-body-container{
+            position:relative;
+            left:0;
+            overflow-x:hidden;
+            overflow-y:auto;
+            box-sizing:border-box;
+            background:rgba(85,85,85,0.8)
+        .more-disk{
+            margin:0;
+            border:0 none;
+            padding:30px 30px;
+            text-align:left;
+            font-weight:400;
+            color:#33FF7F;
+            background-color:rgba(85,85,85,0.8);
+            word-break: break-all;
+            word-wrap: break-word;
+            }
+        .more-disk a{
+            padding:5px
+            }
+        .list-table{
+            width:100%;
+            padding:20px;
+            border-spacing:0
+            }
+        .list-table tr{
+            height:40px
+            }
+        .list-table tr[data-to]:hover{
+            background-color:rgba(211,211,211,0.8);
+            }
+        .list-table tr:first-child{
+            background:rgba(51,51,51,0.5);
+            }
+        .list-table td,.list-table th{
+            padding:0 10px;text-align:left
+            }
+        .list-table .size,.list-table .updated_at{
+            text-align:right
+            }
+        .list-table .file ion-icon{
+            font-size:15px;
+            vertical-align:bottom}
+
+        .mask{position:absolute;
+        left:0px;
+        top:0px;
+        width:100%;
+        background-color:#000;
+        filter:alpha(opacity=50);
+        opacity:0.5;z-index:2;
+        }
+        #footer{
+            color:#33FF7F;
+            text-align:center;
+        }
 <?php if ($_SERVER['admin']) { ?>
-        .operate{display:inline-table;margin:0;list-style:none;}
-        .operate ion-icon{vertical-align:bottom}
-        .operate ul{position:absolute;display:none;background:#fffaaa;border:0px #f7f7f7 solid;border-radius:5px;margin:-7px 0 0 0;padding:0 7px;color:#205D67;z-index:1;}
-        .operate:hover ul{position:absolute;display:inline-table;}
-        .operate ul li{padding:7px;list-style:none;display:inline-table;}
-        .operate ul li ion-icon{vertical-align:bottom}
+        .operate{
+            display:inline-table;
+            margin:0;
+            list-style:none;
+            }
+        .operate ion-icon{
+            vertical-align:bottom
+            }
+        .operate ul{
+            position:absolute;
+            display:none;
+            background:#fffaaa;
+            border:0px #f7f7f7 solid;
+            border-radius:5px;
+            margin:-7px 0 0 0;
+            padding:0 7px;
+            color:#205D67;
+            z-index:1;}
+        .operate:hover ul{
+            position:absolute;
+            display:inline-table;
+            }
+        .operate ul li{
+            padding:7px;
+            list-style:none;
+            display:inline-table;
+            }
+        .operate ul li ion-icon{
+            vertical-align:bottom
+            }
 <?php } ?>
-        .operatediv{position:absolute;border:1px #CCCCCC;background-color:#FFFFCC;z-index:2;}
-        .operatediv div{margin:16px}
-        .operatediv_close{position:absolute;right:3px;top:3px;}
-        .readme{padding:8px;background-color:#fff;}
-        .markdown-body{padding:20px;text-align:left}
+        .operatediv{
+            position:absolute;
+            border:1px #CCCCCC;
+            background-color:#FFFFCC;
+            z-index:2;}
+        .operatediv div{
+            margin:16px
+            }
+        .operatediv_close{
+            position:absolute;
+            right:3px;top:3px;}
+        .readme{
+            padding:8px;
+            background-color:rgba(85,85,85,0.8);
+            }
+        
         @media only screen and (max-width:480px){
             .title{margin-bottom:24px}
             .list-wrapper{width:95%; margin-bottom:24px;}
@@ -523,7 +655,7 @@
 	</div>
 <?php   }
     } ?>
-    <div style="color: rgba(247,247,249,0);"><?php echo date("Y-m-d H:i:s")." ".getconstStr('Week')[date("w")]." ".$_SERVER['REMOTE_ADDR'];?></div>
+    <font color="#f7f7f9"><?php echo date("Y-m-d H:i:s")." ".getconstStr('Week')[date("w")]." ".$_SERVER['REMOTE_ADDR'];?></font>
 </body>
 <?php if ($files) { ?>
 <?php if ($head||$readme) { ?><link rel="stylesheet" href="//unpkg.zhimg.com/github-markdown-css@3.0.1/github-markdown.css">
