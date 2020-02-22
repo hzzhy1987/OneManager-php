@@ -156,7 +156,8 @@ a:hover {
 	.operate ul {
 		position:absolute;
 		display:none;
-		background:#fffaaa;
+		background:rgba(85,85,0,8);
+		/**background:#fffaaa;*/
 		border:0px #f7f7f7 solid;
 		border-radius:5px;
 		margin:-7px 0 0 0;
@@ -181,8 +182,8 @@ a:hover {
 ?>
          .operatediv {
 	position:absolute;
-	border:1px #CCCCCC;
-	background-color:#FFFFCC;
+	border:1px rgba(85,85,85,0.3);
+	background-color:rgba(85,85,85,0.3);
 	z-index:2;
 }
 .operatediv div {
