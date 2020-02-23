@@ -10,7 +10,8 @@
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.003/favicon/64x64/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ldxw/CDN@0.003/favicon/64x64/favicon.ico" type="image/x-icon" />
     <style type="text/css">
-        body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1em;color:#1E90FF;background:url("http://www.qqzzz.net/www/images/bj.png")}
+	    /**("http://www.qqzzz.net/www/images/bj.png")*/
+        body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1em;color:#1E90FF;background:url("https://i.loli.net/2020/02/23/tpVLFaZRYOwcAju.png")}
         a{color:#1E90FF;cursor:pointer;text-decoration:none}
         a:hover{color:#1E90FF}
         .login ion-icon{vertical-align:bottom}
