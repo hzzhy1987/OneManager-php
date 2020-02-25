@@ -476,7 +476,7 @@ function updateProgram($function_name, $Region, $Namespace, $SecretId, $SecretKe
     $meth = 'POST';
     $host = 'scf.tencentcloudapi.com';
     $tmpdata['Action'] = 'UpdateFunctionCode';
-    $tmpdata['Code.GitUrl'] = 'https://github.com/ldxw/OneManager-php';
+    $tmpdata['Code.GitUrl'] = 'https://github.com/ldxw/OneManager-php/tree/nginx';
     $tmpdata['CodeSource'] = 'Git';
     $tmpdata['FunctionName'] = $function_name;
     $tmpdata['Handler'] = 'index.main_handler';
