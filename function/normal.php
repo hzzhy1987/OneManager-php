@@ -254,7 +254,7 @@ Can not write config to file.<br>
         }
     }
     if ($_GET['install0']) {
-        if (!ConfigWriteable()) {
+        /**if (!ConfigWriteable()) {
             $html .= getconstStr('MakesuerWriteable');
             $title = 'Error';
             return message($html, $title, 201);
@@ -263,7 +263,7 @@ Can not write config to file.<br>
             $html .= getconstStr('MakesuerRewriteOn');
             $title = 'Error';
             return message($html, $title, 201);
-        }
+        }*/
         $html .= '
     <form action="?install1" method="post" onsubmit="return notnull(this);">
 language:<br>';
