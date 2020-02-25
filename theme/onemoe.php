@@ -162,7 +162,7 @@
                     $readme = false; ?>
                 <table class="list-table" id="list-table">
                     <tr id="tr0">
-                        <th class="file" onclick="sortby('a');"><?php echo getconstStr('File'); if ($_SERVER['USER']!='qcloud') { ?>&nbsp;&nbsp;&nbsp;<button onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails'); ?></button><?php } ?></th>
+                        <th class="file" onclick="sortby('a');"><?php echo getconstStr('File'); if ($_SERVER['USER']!='qcloud') { ?>&nbsp;&nbsp;&nbsp;<!--<button onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails'); ?></button>--><?php } ?></th>
                         <th class="updated_at" onclick="sortby('time');"><?php echo getconstStr('EditTime'); ?></th>
                         <th class="size" onclick="sortby('size');"><?php echo getconstStr('Size'); ?></th>
                     </tr>
