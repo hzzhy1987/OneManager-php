@@ -429,8 +429,8 @@ if ($files) {
 						?>&nbsp;
 						&nbsp;
 						&nbsp;
-						<button onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails');
-						?></button><?php
+						<!--<button onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails');
+						?></button>--><?php
 					}
 					?></th>
 					                        <th class="updated_at" width="25%" onclick="sortby('time');"><?php echo getconstStr('EditTime');
