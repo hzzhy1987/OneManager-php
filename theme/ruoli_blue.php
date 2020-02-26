@@ -211,7 +211,7 @@
                     $readme = false; ?>
                 <table class="list-table" id="list-table">
                     <tr id="tr0">
-                        <th class="file" onclick="sortby('a');"><?php echo getconstStr('File'); if ($_SERVER['USER']!='qcloud') { ?>&ensp;&ensp;&ensp;<!--<button class="button" onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails'); ?></button>--><?php } ?><button onclick="CopyAllDownloadUrl();"><?php echo getconstStr('CopyAllDownloadUrl'); ?></button></th>
+                        <th class="file" onclick="sortby('a');"><?php echo getconstStr('File'); if ($_SERVER['USER']!='qcloud') { ?>&ensp;&ensp;&ensp;<!--<button class="button" onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails'); ?></button>--><?php } ?><button class="button" onclick="CopyAllDownloadUrl();"><?php echo getconstStr('CopyAllDownloadUrl'); ?></button></th>
                         <th class="updated_at" width="25%" onclick="sortby('time');"><?php echo getconstStr('EditTime'); ?></th>
                         <th class="size" width="15%" onclick="sortby('size');"><?php echo getconstStr('Size'); ?></th>
                     </tr>
