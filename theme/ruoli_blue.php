@@ -211,7 +211,7 @@
                     $readme = false; ?>
                 <table class="list-table" id="list-table">
                     <tr id="tr0">
-                        <th class="file" onclick="sortby('a');"><?php echo getconstStr('File'); if ($_SERVER['USER']!='qcloud') { ?>&ensp;&ensp;&ensp;<!--<button class="button" onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails'); ?></button>--><?php } ?></th>
+                        <th class="file" onclick="sortby('a');"><?php echo getconstStr('File'); if ($_SERVER['USER']!='qcloud') { ?>&ensp;&ensp;&ensp;<!--<button class="button" onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails'); ?></button>--><?php } ?><button onclick="CopyAllDownloadUrl();"><?php echo getconstStr('CopyAllDownloadUrl'); ?></button></th>
                         <th class="updated_at" width="25%" onclick="sortby('time');"><?php echo getconstStr('EditTime'); ?></th>
                         <th class="size" width="15%" onclick="sortby('size');"><?php echo getconstStr('Size'); ?></th>
                     </tr>
@@ -289,7 +289,7 @@
                             <ion-icon name="document"></ion-icon>
 <?php                           } ?>
                             <a id="file_a<?php echo $filenum;?>" name="filelist" href="<?php echo path_format($_SERVER['base_disk_path'] . '/' . $path . '/' . encode_str_replace($file['name'])); ?>?preview" target=_blank><?php echo str_replace('&','&amp;', $file['name']); ?></a>
-                            <a href="<?php echo path_format($_SERVER['base_disk_path'] . '/' . $path . '/' . str_replace('&','&amp;', $file['name']));?>"><ion-icon name="download"></ion-icon></a>
+                            <a class="download" href="<?php echo path_format($_SERVER['base_disk_path'] . '/' . $path . '/' . str_replace('&','&amp;', $file['name']));?>"><ion-icon name="download"></ion-icon></a>
                         </td>
                         <td class="updated_at" id="file_time<?php echo $filenum;?>"><?php echo time_format($file['lastModifiedDateTime']); ?></td>
                         <td class="size" id="file_size<?php echo $filenum;?>"><?php echo size_format($file['size']); ?></td>
@@ -715,6 +715,21 @@
             } else console.log(xhr.status+'\n'+xhr.responseText);
         }
     }
+    
+    function CopyAllDownloadUrl() {
+        var tmptextarea=document.createElement('textarea');
+        document.body.appendChild(tmptextarea);
+        tmptextarea.setAttribute('style','position:absolute;left:-100px;width:0px;height:0px;');
+        document.querySelectorAll('.download').forEach(function (e) {
+            tmptextarea.innerHTML+=e.href+"\r\n";
+        });
+        tmptextarea.select();
+        tmptextarea.setSelectionRange(0, tmptextarea.value.length);
+        document.execCommand("copy");
+        alert(tmptextarea.innerHTML);
+    }
+    var sort=0;
+    
     function sortby(string) {
         if (string=='a') if (sort!=0) {
             for (i = 1; i <= <?php echo $filenum?$filenum:0;?>; i++) document.getElementById('tr'+i).parentNode.insertBefore(document.getElementById('tr'+i),document.getElementById('tr'+(i-1)).nextSibling);
